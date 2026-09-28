@@ -6,13 +6,22 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E227DA62E17063999CF139C9 /* Pods_YujiaLv.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 025CD40E9E8A1C3DB05DE5F7 /* Pods_YujiaLv.framework */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
+		025CD40E9E8A1C3DB05DE5F7 /* Pods_YujiaLv.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YujiaLv.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		07DD01530B93F61934418E8D /* Pods-YujiaLv.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YujiaLv.debug.xcconfig"; path = "Target Support Files/Pods-YujiaLv/Pods-YujiaLv.debug.xcconfig"; sourceTree = "<group>"; };
+		107083F8C5FAF2DFEB5D6B7E /* Pods-YujiaLv.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-YujiaLv.release.xcconfig"; path = "Target Support Files/Pods-YujiaLv/Pods-YujiaLv.release.xcconfig"; sourceTree = "<group>"; };
 		2874B5B630650AD10074FE33 /* YujiaLv.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = YujiaLv.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		2874B5B830650AD10074FE33 /* YujiaLv */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+			);
 			path = YujiaLv;
 			sourceTree = "<group>";
 		};
@@ -23,6 +32,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E227DA62E17063999CF139C9 /* Pods_YujiaLv.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -34,6 +44,8 @@
 			children = (
 				2874B5B830650AD10074FE33 /* YujiaLv */,
 				2874B5B730650AD10074FE33 /* Products */,
+				F81C2E3B758C4E042CC1B413 /* Pods */,
+				912E918861562216E28A2883 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -45,6 +57,24 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		912E918861562216E28A2883 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				025CD40E9E8A1C3DB05DE5F7 /* Pods_YujiaLv.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F81C2E3B758C4E042CC1B413 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				07DD01530B93F61934418E8D /* Pods-YujiaLv.debug.xcconfig */,
+				107083F8C5FAF2DFEB5D6B7E /* Pods-YujiaLv.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -52,6 +82,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2874B5C130650AD30074FE33 /* Build configuration list for PBXNativeTarget "YujiaLv" */;
 			buildPhases = (
+				ED498AA03BFDB26D8A79194D /* [CP] Check Pods Manifest.lock */,
 				2874B5B230650AD10074FE33 /* Sources */,
 				2874B5B330650AD10074FE33 /* Frameworks */,
 				2874B5B430650AD10074FE33 /* Resources */,
@@ -64,8 +95,6 @@
 				2874B5B830650AD10074FE33 /* YujiaLv */,
 			);
 			name = YujiaLv;
-			packageProductDependencies = (
-			);
 			productName = YujiaLv;
 			productReference = 2874B5B630650AD10074FE33 /* YujiaLv.app */;
 			productType = "com.apple.product-type.application";
@@ -113,6 +142,31 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		ED498AA03BFDB26D8A79194D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-YujiaLv-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2874B5B230650AD10074FE33 /* Sources */ = {
@@ -246,6 +300,7 @@
 		};
 		2874B5C230650AD30074FE33 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 07DD01530B93F61934418E8D /* Pods-YujiaLv.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -286,6 +341,7 @@
 		};
 		2874B5C330650AD30074FE33 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 107083F8C5FAF2DFEB5D6B7E /* Pods-YujiaLv.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
